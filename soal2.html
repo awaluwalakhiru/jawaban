@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soal Kedua</title>
+</head>
+
+<body>
+    <script>
+        function valid_username(params) {
+            var regex = /^[a-zA-Z]{1}[a-zA-Z0-9]{4,9}$/;
+            return regex.test(params);
+        }
+        let params = 'abcde';
+        if (valid_username(params) === true) {
+            alert('Username diperbolehkan');
+        } else {
+            alert('username tidak diijinkan');
+        }
+        let pass = 'a1$=kwer';
+        function valid_password(pass) {
+            var regex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%])(?=.*[=]).{8,}$/;
+            return regex.test(pass);
+        }
+        if (valid_password(pass) === true) {
+            alert('Password diperbolehkan');
+        } else {
+            alert('Password tidak diijinkan');
+        }
+    </script>
+</body>
+
+</html>
